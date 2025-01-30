@@ -11,7 +11,7 @@ const auditoriumRepository = AppDataSource.getRepository(Auditorio);
 // Criar um novo auditório
 auditorioRoutes.post("/", async (req: Request, res: Response) => {
     try {
-        const auditoriumBody = req.body as Auditorio
+        const auditoriumBody = req.body as Auditorio;
 
         if (!auditoriumBody || !auditoriumBody.name || !auditoriumBody.capacity || !auditoriumBody.location) {
             res.status(400).json("Preencha todos os dados obrigatórios!");

@@ -3,7 +3,7 @@ import { DataSource } from "typeorm"
 import * as dotenv from "dotenv"
 
 import Livro from "../entities/Livro"
-import Auditorio from "../entities/Auditorio"
+import Auditorio  from "../entities/Auditorio"
 import Leitor from "../entities/Leitor"
 import Autor from "../entities/Autor"
 
@@ -16,7 +16,7 @@ export const AppDataSource = new DataSource({
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    synchronize: true,
+    synchronize: false,
     logging: true,
     entities: ["src/entity/*.ts"],
     migrations: ["src/database/migrations/*.ts"]

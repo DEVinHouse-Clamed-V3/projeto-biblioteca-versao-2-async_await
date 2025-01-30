@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 
 @Entity("auditoriums") 
 
-export class Auditorium {
+export class Auditorio {
 
   @PrimaryGeneratedColumn() 
   id: number;
@@ -28,3 +28,5 @@ export class Auditorium {
   @UpdateDateColumn() 
   updated_at: Date;
 }
+
+export default Auditorio;

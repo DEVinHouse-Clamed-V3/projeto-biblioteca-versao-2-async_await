@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+
+
 import "reflect-metadata";
 import express from "express";
 import cors from "cors";
@@ -8,6 +11,7 @@ import livroRoutes from "./routes/livro.routes";
 import auditorioRoutes from "./routes/auditorio.routes";
 import autorRoutes from "./routes/autor.routes";
 import leitorRoutes from "./routes/leitor.routes";
+import { env } from "process";
 
 const app = express();
 
