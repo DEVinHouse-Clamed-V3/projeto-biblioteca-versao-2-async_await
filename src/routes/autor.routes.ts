@@ -1,7 +1,16 @@
+import { create } from 'domain';
 import { Router } from 'express';
+import AuthosController from '../controllers/AuthorsController';
 
-const autorRoutes = Router();
+const authorRouter = Router();
 
-/* Implemente aqui os métodos que irão atender as requisições HTTP para a entidade Autor. */
+const authosController = new AuthosController()
 
-export default autorRoutes;
+authorRouter.post("/", authosController.create)
+authorRouter.get("/", authosController.getAll)
+authorRouter.get("/:id", authosController.getById)
+authorRouter.put("/:id", authosController.put)
+authorRouter.delete("/", authosController.delete)
+authorRouter.get("/:mes", authosController.autoresMes)  
+
+export default authorRouter;

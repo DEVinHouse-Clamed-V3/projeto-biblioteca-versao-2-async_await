@@ -49,7 +49,7 @@ class AuthosController {
   };
 
   // Buscar um autor específico: Permitir ao usuário buscar um autor por ID.
-  getByID = async (req: Request, res: Response) => {
+  getById = async (req: Request, res: Response) => {
     try {
       const result = await this.authorsRepository.findOne({
         where: {
